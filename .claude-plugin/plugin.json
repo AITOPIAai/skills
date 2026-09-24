@@ -1,0 +1,25 @@
+{
+  "name": "aitopia",
+  "version": "0.1.0",
+  "description": "Images, video, voice, music and media editing on your AITOPIA account, plus AITOPIA's production playbooks: product ads, UGC videos, short-form videos, YouTube thumbnails and brand kits.",
+  "author": {
+    "name": "AITOPIA",
+    "url": "https://aitopia.ai"
+  },
+  "homepage": "https://aitopia.ai",
+  "repository": "https://github.com/AITOPIAai/skills",
+  "license": "MIT",
+  "keywords": [
+    "aitopia",
+    "image-generation",
+    "video-generation",
+    "text-to-speech",
+    "music-generation",
+    "video-editing",
+    "product-ad",
+    "ugc",
+    "youtube-thumbnail",
+    "brand-kit",
+    "mcp"
+  ]
+}

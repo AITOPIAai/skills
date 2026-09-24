@@ -1,0 +1,16 @@
+{
+  "name": "aitopia",
+  "description": "AITOPIA: images, video, voice, music, media editing and production playbooks on your AITOPIA account.",
+  "owner": {
+    "name": "AITOPIA",
+    "url": "https://aitopia.ai"
+  },
+  "plugins": [
+    {
+      "name": "aitopia",
+      "source": "./",
+      "description": "Images, video, voice, music and media editing on your AITOPIA account, plus AITOPIA's production playbooks: product ads, UGC videos, short-form videos, YouTube thumbnails and brand kits.",
+      "version": "0.1.0"
+    }
+  ]
+}

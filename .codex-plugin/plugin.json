@@ -1,0 +1,49 @@
+{
+  "name": "aitopia",
+  "version": "0.1.0",
+  "description": "Images, video, voice, music and media editing on your AITOPIA account, plus AITOPIA's production playbooks: product ads, UGC videos, short-form videos, YouTube thumbnails and brand kits.",
+  "author": {
+    "name": "AITOPIA",
+    "url": "https://aitopia.ai"
+  },
+  "homepage": "https://aitopia.ai",
+  "repository": "https://github.com/AITOPIAai/skills",
+  "license": "MIT",
+  "keywords": [
+    "aitopia",
+    "image-generation",
+    "video-generation",
+    "text-to-speech",
+    "music-generation",
+    "video-editing",
+    "product-ad",
+    "ugc",
+    "youtube-thumbnail",
+    "brand-kit",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AITOPIA",
+    "shortDescription": "Create and edit images, video, voice and music",
+    "longDescription": "AITOPIA turns your agent into a creative production studio on your AITOPIA account: generate images, video, voiceovers, music and sound effects with the right model for each job, edit media (join, trim, resize, text, logo, subtitles, music, voiceover), and run AITOPIA's production playbooks for product ads, UGC videos, short-form videos, YouTube thumbnails and brand kits. Every result is saved to your AITOPIA account. Sign in with AITOPIA on first use.",
+    "developerName": "AITOPIA",
+    "category": "Design",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aitopia.ai",
+    "defaultPrompt": [
+      "Make a 9:16 product ad video from this product photo with a voiceover",
+      "Generate four YouTube thumbnail options for my video",
+      "Remove the background of this photo and add our logo",
+      "Create a 15 second UGC-style video for my app",
+      "Build a brand kit for my coffee shop"
+    ],
+    "brandColor": "#9334EA",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

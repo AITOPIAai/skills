@@ -43,16 +43,18 @@ More options in [INSTALL.md](./INSTALL.md). Agent-driven install (paste into you
 
 ## Skills
 
-| Skill | Invoke (Claude Code plugin) | Description |
-|---|---|---|
-| [`aitopia-generate`](./skills/aitopia-generate) | `/aitopia:aitopia-generate` | Images, video, voiceover, music and sound effects. Picks the model for the job the way AITOPIA does; several images come back together in one call. |
-| [`aitopia-edit`](./skills/aitopia-edit) | `/aitopia:aitopia-edit` | Join clips, add voiceover or music, trim, resize to 9:16 / 16:9 / 1:1, text and logo overlays, subtitles, fades, speed changes, mute / extract / normalize audio, animate a still image. |
-| [`aitopia-upload`](./skills/aitopia-upload) | `/aitopia:aitopia-upload` | Send a local photo, video, audio file or document to AITOPIA (up to 95 MB; 200 MB from a public URL). |
-| [`aitopia-product-ad`](./skills/aitopia-product-ad) | `/aitopia:aitopia-product-ad` | Product commercial from a product photo: hero keyframe, motion, voiceover, music. |
-| [`aitopia-ugc-video`](./skills/aitopia-ugc-video) | `/aitopia:aitopia-ugc-video` | Creator-style UGC ad — testimonial, before/after, hook video, phone-shot feel. |
-| [`aitopia-short-video`](./skills/aitopia-short-video) | `/aitopia:aitopia-short-video` | TikTok / Reels / Shorts, launch and promo videos end to end. |
-| [`aitopia-youtube-thumbnail`](./skills/aitopia-youtube-thumbnail) | `/aitopia:aitopia-youtube-thumbnail` | High click-through YouTube thumbnails: bold subject, contrast, big readable text. |
-| [`aitopia-brand-kit`](./skills/aitopia-brand-kit) | `/aitopia:aitopia-brand-kit` | Logo direction, color palette, typography and usage rules. |
+| Skill | What it does |
+|---|---|
+| [`aitopia-generate`](./skills/aitopia-generate)<br>`/aitopia:aitopia-generate` | Images, video, voiceover, music and sound effects. Picks the model for the job the way AITOPIA does; several images come back together in one call. |
+| [`aitopia-edit`](./skills/aitopia-edit)<br>`/aitopia:aitopia-edit` | Join clips, add voiceover or music, trim, resize to 9:16 / 16:9 / 1:1, text and logo overlays, subtitles, fades, speed changes, mute / extract / normalize audio, animate a still image. |
+| [`aitopia-upload`](./skills/aitopia-upload)<br>`/aitopia:aitopia-upload` | Send a local photo, video, audio file or document to AITOPIA (up to 95 MB; 200 MB from a public URL). |
+| [`aitopia-product-ad`](./skills/aitopia-product-ad)<br>`/aitopia:aitopia-product-ad` | Product commercial from a product photo: hero keyframe, motion, voiceover, music. |
+| [`aitopia-ugc-video`](./skills/aitopia-ugc-video)<br>`/aitopia:aitopia-ugc-video` | Creator-style UGC ad — testimonial, before/after, hook video, phone-shot feel. |
+| [`aitopia-short-video`](./skills/aitopia-short-video)<br>`/aitopia:aitopia-short-video` | TikTok / Reels / Shorts, launch and promo videos end to end. |
+| [`aitopia-youtube-thumbnail`](./skills/aitopia-youtube-thumbnail)<br>`/aitopia:aitopia-youtube-thumbnail` | High click-through YouTube thumbnails: bold subject, contrast, big readable text. |
+| [`aitopia-brand-kit`](./skills/aitopia-brand-kit)<br>`/aitopia:aitopia-brand-kit` | Logo direction, color palette, typography and usage rules. |
+
+The second line is the command in the Claude Code plugin; with `npx skills` the command is the skill name, e.g. `/aitopia-generate`.
 
 Agents also use the skills on their own when a request fits. The playbooks behind the workflow skills live on AITOPIA and are loaded at run time, so they improve without reinstalling anything.
 

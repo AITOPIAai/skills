@@ -35,6 +35,19 @@ codex mcp login aitopia
 npx skills add AITOPIAai/skills --agent codex
 ```
 
+### One-click: Cursor, VS Code, Gemini CLI
+
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=aitopia&config=eyJ1cmwiOiJodHRwczovL21jcC5haXRvcGlhLmFpL21jcCJ9)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_AITOPIA-0098FF?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=aitopia&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A//mcp.aitopia.ai/mcp%22%7D)
+
+Gemini CLI (server + playbooks):
+
+```bash
+gemini extensions install https://github.com/AITOPIAai/skills
+```
+
+Any other MCP client: add the remote server `https://mcp.aitopia.ai/mcp` (Streamable HTTP, OAuth sign-in).
+
 ### Claude (web and desktop)
 
 Settings → Connectors → **Add custom connector** → `https://mcp.aitopia.ai/mcp`, then sign in with AITOPIA. Generated images and videos show inline in the conversation.

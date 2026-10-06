@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.aitopia/aitopia",
+  "title": "AITOPIA",
+  "description": "Generate and edit images, video and audio: 300+ AI models, video tools, voice cloning, transcripts.",
+  "version": "1.0.0",
+  "websiteUrl": "https://aitopia.ai",
+  "repository": {
+    "url": "https://github.com/AITOPIAai/skills",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/AITOPIAai/skills/main/assets/icon.png",
+      "mimeType": "image/png"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.aitopia.ai/mcp"
+    }
+  ]
+}

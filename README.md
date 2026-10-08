@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/badge/version-0.1.0-green.svg)](./VERSION)
 [![Skills](https://img.shields.io/badge/skills-8-9334EA.svg)](#skills)
 
-AI agent skills for creating and editing images, video, voiceovers and music with [AITOPIA](https://aitopia.ai) — plus AITOPIA's production playbooks for product ads, UGC videos, short-form videos, YouTube thumbnails and brand kits. Works with Claude Code, Codex, Cursor and other agents that load Markdown skills, and with any MCP client through the AITOPIA server.
+AI agent skills for creating, editing and analyzing images, video, voiceovers and music with [AITOPIA](https://aitopia.ai) — plus AITOPIA's production playbooks for product ads, UGC videos, short-form videos, YouTube thumbnails and brand kits. Works with Claude Code, Codex, Cursor and other agents that load Markdown skills, and with any MCP client through the AITOPIA server.
 
 Everything runs on your AITOPIA account through the AITOPIA MCP server (`https://mcp.aitopia.ai/mcp`). There is nothing to install locally: the first AITOPIA action opens a browser sign-in, and every result is saved to your account, where you can keep working on it.
 
@@ -73,6 +73,26 @@ Agents also use the skills on their own when a request fits. The playbooks behin
 
 The skills chain: `aitopia-upload` turns a local file into an asset URL that every other skill accepts; `aitopia-generate` produces the stills and clips that `aitopia-edit` assembles; the workflow skills (`product-ad`, `ugc-video`, `short-video`, `youtube-thumbnail`, `brand-kit`) drive both.
 
+## Video analysis
+
+Ask your agent what is in a video, image or audio file and it uses AITOPIA's `analyze_media` tool. The agent watches the video and listens to it, then answers:
+
+- **Summary:** what happens, what is said, the text on screen, the music and sound.
+- **Scenes:** every shot with its start and end time, ready for cutting with `aitopia-edit`.
+- **Ad review:** a score out of 10, the hook, message, call to action, pacing, strengths and what to improve.
+- **Re-create prompt:** a prompt that makes a similar image or video with `aitopia-generate`.
+- **Your question:** "Is the logo visible in the first 3 seconds?", "Is this suitable for children?"
+
+It answers in any language. Try it in Claude, ChatGPT, Cursor or Codex:
+
+```text
+Analyze this video and list every scene with its time: <video URL>
+Score this ad and tell me how to improve the first 3 seconds: <video URL>
+Write a prompt that re-creates this image: <image URL>
+```
+
+A video can be up to 2 MB for now. One analysis costs about 3 credits, and a failed run is not charged. Ask for the price first and the agent checks it with `dryRun` without running anything. The same analysis is in the [AITOPIA CLI](https://github.com/AITOPIAai/cli) (`aitopia analyze clip.mp4 --mode scenes`) and in [AITOPIA chat](https://aitopia.ai).
+
 ## Quick Reference
 
 | What you want | Skill | Note |
@@ -85,6 +105,10 @@ The skills chain: `aitopia-upload` turns a local file into an asset URL that eve
 | Reframe for Reels / TikTok / YouTube | `aitopia-edit` | `resize` with fit cover / contain |
 | Titles, captions, logo, subtitles | `aitopia-edit` | `add_text`, `overlay`, `subtitle` |
 | Remove a background, upscale, restore | `aitopia-generate` | AITOPIA picks a suitable model or store agent |
+| What is in a video, image or audio | `analyze_media` tool | Summary, speech, on-screen text, audio; video up to 2 MB |
+| Every scene of a video with its time | `analyze_media` tool | `mode: scenes`; then cut with `aitopia-edit` |
+| Review an ad (score, hook, CTA) | `analyze_media` tool | `mode: ad_review` |
+| A prompt that re-creates a video or image | `analyze_media` tool | `mode: prompt`; then `aitopia-generate` |
 | Product commercial | `aitopia-product-ad` | Starts from the product photo |
 | UGC ad | `aitopia-ugc-video` | Creator-style, phone-shot feel |
 | YouTube thumbnail | `aitopia-youtube-thumbnail` | Several variants to choose from |

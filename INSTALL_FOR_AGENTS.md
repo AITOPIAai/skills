@@ -27,10 +27,21 @@ npx skills add AITOPIAai/skills --agent <this agent>
 
 In Claude Code the plugin is the simpler route: `/plugin marketplace add AITOPIAai/skills` then `/plugin install aitopia@aitopia`.
 
-## Step 4 — Verify
+## Step 4 — Install the AITOPIA CLI
+
+Install the command-line tool too, so AITOPIA also works from the terminal and in scripts:
+
+```bash
+npm i -g aitopia
+aitopia login
+```
+
+`aitopia login` opens the browser; tell the user to finish the sign-in there. Check it with `aitopia --version`. If npm is missing, skip this step and say so.
+
+## Step 5 — Verify
 
 Call the AITOPIA `search_skills` tool with `"product ad video"`. A list of skills means the server and sign-in work. Then confirm the `aitopia-*` skills are listed by the agent.
 
-## Step 5 — Done
+## Step 6 — Done
 
 Tell the user AITOPIA is ready and suggest a first request, e.g. *"Generate four product photo options of my mug"* or *"Make a 9:16 product ad from ./product.png"*.

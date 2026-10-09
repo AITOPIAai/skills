@@ -49,6 +49,20 @@ Install the plugin from this repo (it ships `.cursor-plugin/plugin.json` with th
 
 Settings → Connectors → **Add custom connector** → `https://mcp.aitopia.ai/mcp`, then sign in with AITOPIA. The skills are not needed there: the server brings AITOPIA's playbooks with it, and images and videos show inline in the conversation.
 
+## Option 6 — ChatGPT
+
+Go to [chatgpt.com/plugins](https://chatgpt.com/plugins) → **Add** → **Create MCP App**, enter `https://mcp.aitopia.ai/mcp`, then sign in with AITOPIA. Developer mode is no longer needed; every eligible ChatGPT user can add custom MCP servers.
+
+## Option 7 — AITOPIA CLI
+
+For the terminal and scripts, with no MCP client needed:
+
+```bash
+npm i -g aitopia
+aitopia login
+aitopia --help
+```
+
 ## Connect the AITOPIA server
 
 | Client | How |
@@ -57,6 +71,7 @@ Settings → Connectors → **Add custom connector** → `https://mcp.aitopia.ai
 | Codex | `codex mcp add aitopia --url https://mcp.aitopia.ai/mcp` then `codex mcp login aitopia` |
 | Cursor | Add to `~/.cursor/mcp.json`: `{"mcpServers": {"aitopia": {"url": "https://mcp.aitopia.ai/mcp"}}}` |
 | Claude web / desktop | Settings → Connectors → Add custom connector |
+| ChatGPT | chatgpt.com/plugins → Add → Create MCP App |
 | Any MCP client | Streamable HTTP, `https://mcp.aitopia.ai/mcp`, OAuth sign-in |
 
 ## Verify

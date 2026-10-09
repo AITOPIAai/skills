@@ -52,6 +52,21 @@ Any other MCP client: add the remote server `https://mcp.aitopia.ai/mcp` (Stream
 
 Settings → Connectors → **Add custom connector** → `https://mcp.aitopia.ai/mcp`, then sign in with AITOPIA. Generated images and videos show inline in the conversation.
 
+### ChatGPT
+
+Go to [chatgpt.com/plugins](https://chatgpt.com/plugins) → **Add** → **Create MCP App**, enter `https://mcp.aitopia.ai/mcp`, then sign in with AITOPIA. Developer mode is no longer needed.
+
+### AITOPIA CLI (terminal)
+
+```bash
+npm i -g aitopia
+aitopia login
+aitopia image "a red paper boat on a pond"
+aitopia dub video.mp4 --to Spanish --dry-run
+```
+
+`aitopia --help` lists every command (image, video, audio, edit, analyze, transcribe, dub, upload, models…).
+
 More options in [INSTALL.md](./INSTALL.md). Agent-driven install (paste into your agent): [INSTALL_FOR_AGENTS.md](./INSTALL_FOR_AGENTS.md).
 
 ## Skills
